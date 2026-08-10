@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "nodemcu_bu01_test",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

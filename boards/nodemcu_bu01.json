@@ -1,0 +1,65 @@
+{
+  "build": {
+    "arduino": {
+      "variant_h": "variant_generic.h"
+    },
+    "core": "stm32",
+    "cpu": "cortex-m3",
+    "extra_flags": "-DSTM32F103xB -DSTM32F1 -DARDUINO_GENERIC_F103C8TX",
+    "f_cpu": "72000000L",
+    "mcu": "stm32f103c8t6",
+    "product_line": "STM32F103xB",
+    "variant": "STM32F1xx/F103C8T_F103CB(T-U)"
+  },
+  "debug": {
+    "jlink_device": "STM32F103C8",
+    "openocd_target": "stm32f1x",
+    "svd_path": "STM32F103xx.svd",
+    "tools": {
+      "stlink": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-s",
+            "$PACKAGE_DIR/openocd/scripts",
+            "-f",
+            "interface/stlink-hla.cfg",
+            "-c",
+            "transport select hla_swd",
+            "-f",
+            "target/stm32f1x.cfg"
+          ]
+        },
+        "onboard": false,
+        "default": true
+      }
+    }
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "libopencm3",
+    "stm32cube"
+  ],
+  "name": "NodeMCU-BU01 (STM32F103C8, ST-Link HLA)",
+  "upload": {
+    "disable_flushing": false,
+    "maximum_ram_size": 20480,
+    "maximum_size": 65536,
+    "protocol": "stlink",
+    "protocols": [
+      "stlink",
+      "jlink",
+      "cmsis-dap",
+      "blackmagic",
+      "serial",
+      "dfu"
+    ],
+    "require_upload_port": false,
+    "use_1200bps_touch": false,
+    "wait_for_upload_port": false
+  },
+  "url": "https://docs.ai-thinker.com/uwb_1/",
+  "vendor": "Ai-Thinker"
+}
