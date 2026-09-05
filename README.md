@@ -1,0 +1,2 @@
+- To flash a specific type of mode change the `src_dir` in `platformio.ini` to the wanted version 
+- To flash anchor for multiple anchor one tag change the ANCHOR_ID -> the wanted version 
